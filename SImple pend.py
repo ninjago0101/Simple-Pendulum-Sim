@@ -36,18 +36,18 @@ def plot_motion(t, theta, energy):
 def main():
     print("Welcome to the Pendulum Motion Simulator!")
     try:
-        theta0 = float(input("Enter the initial angle (degrees): "))
-        L = float(input("Enter the length of the pendulum (meters): "))
+        theta0 = float(input("Enter the initial angle (deg): "))
+        L = float(input("Enter the length of the pendulum (m): "))
         g = 9.81
-        t_max = float(input("Enter the simulation duration (seconds): "))
-        dt = float(input("Enter the time step for the simulation (seconds): "))
+        t_max = float(input("Enter the simulation duration (s): "))
+        dt = float(input("Enter the time step for the simulation (s): "))
 
         print("\nSimulating pendulum motion... Please wait!")
         t, theta, energy = pendulum_motion(theta0, L, g, t_max, dt)
         plot_motion(t, theta, energy)
 
     except ValueError:
-        print("Invalid input! Please enter valid numbers.")
+        print("Invalid input! .")
 
 if __name__ == "__main__":
     main()
